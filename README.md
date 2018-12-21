@@ -22,7 +22,7 @@ dog250大神提到了bbr初版的两个问题：bbr在高丢包率下易失速�
 目前只编译了适合CentOS的内核，Debian/Ubuntu有时间的话折腾一个。  
 
 一键脚本(CentOS)：  
-```shell
+```bash
 wget -N --no-check-certificate "https://github.com/cx9208/bbrplus/raw/master/ok_bbrplus_centos.sh" && chmod +x ok_bbrplus_centos.sh && ./ok_bbrplus_centos.sh
 ```
 一键安装重启后按手动安装的第7步来检查是否安装成功。  
