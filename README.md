@@ -31,5 +31,8 @@ wget -N --no-check-certificate "https://github.com/cx9208/bbrplus/raw/master/ok_
 # 手动安装方法：  
 编写中，待补充  
 
+# 卸载方法：  
+待补充  
+
 # 内核编译：  
 编写中，待补充  
