@@ -17,7 +17,7 @@ dog250大神提到了bbr初版的两个问题：bbr在高丢包率下易失速�
 注意，这是一个实验性的修改，没有人对它的稳定性负责，也不担保它一定能产生正向的效果。  
 所以请酌情使用，as your own risk.
 
-# 安装方法：  
+# 自动安装方法：  
 由于我只用centos7以及编译内核是一个相当折腾的事，  
 目前只编译了适合CentOS的内核，Debian/Ubuntu有时间的话折腾一个。  
 
@@ -28,5 +28,8 @@ wget -N --no-check-certificate "https://github.com/cx9208/bbrplus/raw/master/ok_
 安装后，执行uname -r，显示4.14.89则切换内核成功  
 执行lsmod | grep bbr，显示有bbrplus则开启成功   
 
-手动安装(CentOS)：  
+# 手动安装：  
+编写中，待补充  
+
+# 内核编译：  
 编写中，待补充  
