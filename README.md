@@ -16,3 +16,9 @@ dog250大神提到了bbr初版的两个问题：bbr在高丢包率下易失速�
 
 注意，这是一个实验性的修改，没有人对它的稳定性负责，也不担保它一定能产生正向的效果。  
 所以请酌情使用，as your own risk.
+
+安装方法：  
+一键脚本：  
+```
+wget -N --no-check-certificate "https://github.com/cx9208/bbrplus/raw/master/ok_bbrplus_centos.sh" && chmod +x ok_bbrplus_centos.sh && ./ok_bbrplus_centos.sh
+```
