@@ -45,10 +45,10 @@ yum install -y kernel-4.14.89-1.x86_64.rpm
 grub2-set-default 'CentOS Linux (4.14.89) 7 (Core)'
 
 5.
-设置fq
-echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
-设置bbrplus
-echo "net.ipv4.tcp_congestion_control=bbrplus" >> /etc/sysctl.conf
+设置fq  
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf  
+设置bbrplus  
+echo "net.ipv4.tcp_congestion_control=bbrplus" >> /etc/sysctl.conf  
 
 6.
 重启
