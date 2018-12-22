@@ -55,13 +55,13 @@ echo "net.ipv4.tcp_congestion_control=bbrplus" >> /etc/sysctl.conf
 reboot
 
 7.
-检查内核版本
-uname -r
-显示4.14.89则成功
+检查内核版本  
+uname -r  
+显示4.14.89则成功  
 
-检查bbrplus是否已经启动
-lsmod | grep bbrplus
-显示有tcp_bbrplus则成功
+检查bbrplus是否已经启动  
+lsmod | grep bbrplus  
+显示有tcp_bbrplus则成功  
 
 # 卸载方法：  
 待补充  
