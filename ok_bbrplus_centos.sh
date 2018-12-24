@@ -1,12 +1,13 @@
  #!/usr/bin/env bash
 
+kernel_version="4.14.90"
 #脚本制作:cx9208
 if [[ ! -f /etc/redhat-release ]]; then
 	echo -e "仅支持centos"
 	exit 0
 fi
 
-if [[ "$(uname -r)" == "4.14.89" ]]; then
+if [[ "$(uname -r)" == "${kernel_version}" ]]; then
 	echo -e "内核已经安装，无需重复执行。"
 	exit 0
 fi
@@ -20,13 +21,13 @@ if [[ -e /appex/bin/serverSpeeder.sh ]]; then
 	rm -f appex.sh
 fi
 echo -e "下载内核..."
-wget https://github.com/cx9208/bbrplus/raw/master/centos7/x86_64/kernel-4.14.90.rpm
+wget https://github.com/cx9208/bbrplus/raw/master/centos7/x86_64/kernel-${kernel_version}.rpm
 echo -e "安装内核..."
-yum install -y kernel-4.14.90.rpm
+yum install -y kernel-${kernel_version}.rpm
 
 #检查内核是否安装成功
 list="$(awk -F\' '$1=="menuentry " {print i++ " : " $2}' /etc/grub2.cfg)"
-target="CentOS Linux (4.14.89)"
+target="CentOS Linux (${kernel_version})"
 result=$(echo $list | grep "${target}")
 if [[ "$result" = "" ]]; then
 	echo -e "内核安装失败"
@@ -34,11 +35,11 @@ if [[ "$result" = "" ]]; then
 fi
 
 echo -e "切换内核..."
-grub2-set-default 'CentOS Linux (4.14.89) 7 (Core)'
+grub2-set-default 'CentOS Linux (${kernel_version}) 7 (Core)'
 echo -e "启用模块..."
 echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_congestion_control=bbrplus" >> /etc/sysctl.conf
-rm -f kernel-4.14.89-1.x86_64.rpm
+rm -f kernel-${kernel_version}.rpm
 
 read -p "bbrplus安装完成，现在重启 ? [Y/n] :" yn
 [ -z "${yn}" ] && yn="y"
