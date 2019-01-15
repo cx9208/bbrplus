@@ -34,7 +34,7 @@ wget "https://github.com/cx9208/bbrplus/raw/master/ok_bbrplus_centos.sh" && chmo
 
 2.  
 下载内核  
-wget https://github.com/cx9208/bbrplus/raw/master/centos/x86_64/kernel-4.14.89-1.x86_64.rpm  
+wget https://github.com/cx9208/bbrplus/raw/master/centos7/x86_64/kernel-4.14.90.rpm  
 
 3.  
 安装内核  
@@ -42,7 +42,7 @@ yum install -y kernel-4.14.89-1.x86_64.rpm
 
 4.  
 切换启动内核  
-grub2-set-default 'CentOS Linux (4.14.89) 7 (Core)'  
+grub2-set-default 'CentOS Linux (4.14.90) 7 (Core)'  
 
 5.  
 设置fq  
