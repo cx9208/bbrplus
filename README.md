@@ -74,17 +74,18 @@ wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.14.91.tar.xz
 解压   
 tar  -Jxvf  linux-4.14.91.tar.xz -C  /root/   
 
-修改linux-4.14.91/include/net/inet_connection_sock.h  
+修改linux-4.14.91/include/net/inet_connection_sock.h，139行  
 u64     icsk_ca_priv[112 / sizeof(u64)];  
 #define ICSK_CA_PRIV_SIZE      (14 * sizeof(u64))  
 这两段数值改为112和14，如上  
 
-修改/net/ipv4/tcp_output.c#L1823行  
-tcp_snd_wnd_test函数大括号后换行添加EXPORT_SYMBOL(tcp_snd_wnd_test);  
+修改/net/ipv4/tcp_output.c#L，1823行  
+tcp_snd_wnd_test函数大括号后}  
+换行添加EXPORT_SYMBOL(tcp_snd_wnd_test);  
 
-添加tcp_bbrplus.c，删除tcp_bbr.c  
-修改linux-4.14.91/net/ipv4/Makefile  
-obj-$(CONFIG_TCP_CONG_BBR) += tcp_bbrplus.o  
+添加tcp_bbrplus.c，删除/net/ipv4/tcp_bbr.c  
+修改linux-4.14.91/net/ipv4/Makefile，  
+obj-$(CONFIG_TCP_CONG_BBR) += tcp_bbrplus.o，bbr改为bbrplus  
 
 安装依赖
 centos  
