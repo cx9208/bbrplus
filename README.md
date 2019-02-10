@@ -64,7 +64,7 @@ lsmod | grep bbrplus
 显示有tcp_bbrplus则成功  
 
 # 卸载方法：  
-待补充  
+安装别的内核bbrplus自动失效，卸载内核自行谷歌即可  
 
 # 内核编译：  
 
