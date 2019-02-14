@@ -68,6 +68,8 @@ lsmod | grep bbrplus
 
 # 内核编译：  
 
+只能用于4.14.x内核，更高版本的tcp部分源码有改动，要移植到高版本内核得自己研究  
+
 下载4.14内核源码   
 wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.14.91.tar.xz   
 
