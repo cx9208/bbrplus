@@ -1,5 +1,4 @@
-# BBRplus
-//编写中  
+# BBRplus 
 
 在https://blog.csdn.net/dog250/article/details/80629551 中，  
 dog250大神提到了bbr初版的两个问题：bbr在高丢包率下易失速以及bbr收敛慢的问题，  
@@ -9,8 +8,7 @@ dog250大神提到了bbr初版的两个问题：bbr在高丢包率下易失速�
   
 由于编译修正后的模块需要4.14版的内核，  
 以及需要修改内核的部分源码，所以需要重新编译整个内核。  
-这里提供一个编译好并内置bbrplus的适用于centos7的内核，以及安装方法供大家测试。  
-编译的详细方法有时间也会写上来。  
+这里提供一个编译好并内置bbrplus的适用于centos7的内核，以及安装方法与编译供方法大家测试。  
 
 **感谢dog250大神对bbr相关原理和代码的解析与分享！**  
 
@@ -18,15 +16,16 @@ dog250大神提到了bbr初版的两个问题：bbr在高丢包率下易失速�
 所以请酌情使用，at your own risk.**
 
 # 脚本安装方法：  
-由于我只用centos7以及编译内核是一个相当折腾的事，  
-目前只编译了适合CentOS的内核，Debian/Ubuntu有时间的话折腾一个。  
 
-一键脚本(CentOS)：  
+一键脚本(仅CentOS)：  
 ```bash
 wget "https://github.com/cx9208/bbrplus/raw/master/ok_bbrplus_centos.sh" && chmod +x ok_bbrplus_centos.sh && ./ok_bbrplus_centos.sh
 ```
 安装后，执行uname -r，显示4.14.90则切换内核成功  
 执行lsmod | grep bbr，显示有bbrplus则开启成功   
+
+一键脚本（全系统）：   
+见https://github.com/chiakge/Linux-NetSpeed   
 
 # 手动安装方法：  
 1.  
