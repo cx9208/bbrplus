@@ -20,7 +20,7 @@ dog250大神提到了bbr初版的两个问题：bbr在高丢包率下易失速�
 一键脚本（全系统）：   
 见https://github.com/chiakge/Linux-NetSpeed   
 
-一键脚本(仅CentOS)：  
+一键脚本（仅CentOS）：  
 ```bash
 wget "https://github.com/cx9208/bbrplus/raw/master/ok_bbrplus_centos.sh" && chmod +x ok_bbrplus_centos.sh && ./ok_bbrplus_centos.sh
 ```
@@ -33,15 +33,15 @@ wget "https://github.com/cx9208/bbrplus/raw/master/ok_bbrplus_centos.sh" && chmo
 
 2.  
 下载内核  
-wget https://github.com/cx9208/bbrplus/raw/master/centos7/x86_64/kernel-4.14.90.rpm  
+wget https://github.com/cx9208/bbrplus/raw/master/centos7/x86_64/kernel-4.14.129-bbrplus.rpm  
 
 3.  
 安装内核  
-yum install -y kernel-4.14.90-1.x86_64.rpm  
+yum install -y kernel-4.14.129-bbrplus.rpm  
 
 4.  
 切换启动内核  
-grub2-set-default 'CentOS Linux (4.14.90) 7 (Core)'  
+grub2-set-default 'CentOS Linux (4.14.129-bbrplus) 7 (Core)'  
 
 5.  
 设置fq  
@@ -56,7 +56,7 @@ reboot
 7.
 检查内核版本  
 uname -r  
-显示4.14.90则成功  
+显示4.14.129-bbrplus则成功  
 
 检查bbrplus是否已经启动  
 lsmod | grep bbrplus  
