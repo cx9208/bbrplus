@@ -24,7 +24,7 @@ dog250大神提到了bbr初版的两个问题：bbr在高丢包率下易失速�
 ```bash
 wget "https://github.com/cx9208/bbrplus/raw/master/ok_bbrplus_centos.sh" && chmod +x ok_bbrplus_centos.sh && ./ok_bbrplus_centos.sh
 ```
-安装后，执行uname -r，显示4.14.90则切换内核成功  
+安装后，执行uname -r，显示4.14.129-bbrplus则切换内核成功  
 执行lsmod | grep bbr，显示有bbrplus则开启成功   
 
 # 手动安装方法：  
