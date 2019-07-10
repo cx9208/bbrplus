@@ -17,6 +17,8 @@ dog250大神提到了bbr初版的两个问题：bbr在高丢包率下易失速�
 
 # 脚本安装方法：  
 
+**不要在生产环境使用一键脚本，建议手动安装，进不了系统用vnc切内核**  
+
 一键脚本（全系统）：   
 见https://github.com/chiakge/Linux-NetSpeed   
 
